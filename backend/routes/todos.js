@@ -29,4 +29,27 @@ router.post("/", async (req, res) => {
     }
 });
 
+// PUT a todo
+router.put("/", async (req, res) => {
+    try {
+        const todo = await Todo.findById(req.body.id);
+        todo.status = req.body.status;
+        const updatedTodo = await todo.save();
+        res.json(updatedTodo);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+})
+
+// DELETE a todo
+router.delete("/", async (req, res) => {
+    try {
+        const todo = await Todo.findById(req.body.id);
+        const deletedTodo = await todo.remove();
+        res.json(deletedTodo);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
 module.exports = router;
