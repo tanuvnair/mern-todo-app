@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import "./todos.css";
 import { Todo } from "./Todo.jsx";
@@ -13,7 +14,7 @@ function Todos() {
 
     return (
         <div className="todos-container">
-            <h1>Todo List <small>({todos?.length})</small></h1>
+            <h1><span class="text-do">ToDo</span> List<small>({todos?.length})</small></h1>
             <ul className="todos">
                 {todos.map((todo) => (
                     <Todo todo={todo} />
