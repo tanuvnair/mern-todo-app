@@ -14,10 +14,10 @@ function Todos() {
 
     return (
         <div className="todos-container">
-            <h1><span class="text-do">ToDo</span> List<small>({todos?.length})</small></h1>
+            <h1><span className="text-do">ToDo</span> List <small>({todos?.length})</small></h1>
             <ul className="todos">
                 {todos.map((todo) => (
-                    <Todo todo={todo} />
+                    <Todo key={todo._id} todo={todo} />
                 ))}
             </ul>
         </div>
