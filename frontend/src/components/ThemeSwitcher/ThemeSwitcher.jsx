@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { FaMoon, FaRegMoon } from "react-icons/fa";
-import "./ThemeSwitcher.css";
+import "./theme-switcher.css";
 
 function ThemeSwitcher() {
-    const [currentTheme, setCurrentTheme] = useState("light");
+    const [currentTheme, setCurrentTheme] = useState("dark");
 
     const toggleTheme = () => {
         const newTheme = currentTheme === "light" ? "dark" : "light";

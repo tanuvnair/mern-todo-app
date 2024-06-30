@@ -22,7 +22,7 @@ mongoose
     .catch((err) => console.log("Could not connect to MongoDB...", err));
 
 // Get saved tasks from the database
-app.get("/getTodoList", (req, res) => {
+app.get("/getTodos", (req, res) => {
     TodoModel.find({})
         .then((todoList) => {
             res.json(todoList);
@@ -31,7 +31,7 @@ app.get("/getTodoList", (req, res) => {
 });
 
 // Add new task to the database
-app.post("/addTodoList", (req, res) => {
+app.post("/addTodo", (req, res) => {
     TodoModel.create({
         title: req.body.title,
         desc: req.body.desc,
@@ -42,7 +42,7 @@ app.post("/addTodoList", (req, res) => {
 });
 
 // Update task fields
-app.post("/updateTodoList/:id", (req, res) => {
+app.post("/updateTodo/:id", (req, res) => {
     const id = req.params.id;
     const updateData = {
         title: req.body.title,
@@ -56,7 +56,7 @@ app.post("/updateTodoList/:id", (req, res) => {
 });
 
 // Delete task from database
-app.delete("/deleteTodoList/:id", (req, res) => {
+app.delete("/deleteTodo/:id", (req, res) => {
     const id = req.params.id;
     TodoModel.findByIdAndDelete({ _id: id })
         .then((todo) => res.json(todo))

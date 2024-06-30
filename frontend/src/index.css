@@ -1,9 +1,9 @@
 :root {
-  --text: #0c0b18;
-  --background: #efeef7;
-  --primary: #2d2c63;
-  --secondary: #c987c5;
-  --accent: #a94c82;
+  --text: #e5f6e8;
+  --background: #040a05;
+  --primary: #93d7a0;
+  --secondary: #308267;
+  --accent: #50bea6;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -12,20 +12,21 @@
 }
 
 :root[data-theme="light"] {
-  --text: #0c0b18;
-  --background: #efeef7;
-  --primary: #2d2c63;
-  --secondary: #c987c5;
-  --accent: #a94c82;
+  --text: #091b0c;
+  --background: #f4fbf5;
+  --primary: #286c34;
+  --secondary: #7dcfb3;
+  --accent: #41af97;
 }
 
 :root[data-theme="dark"] {
-  --text: #e6e5f3;
-  --background: #090811;
-  --primary: #9d9cd3;
-  --secondary: #763572;
-  --accent: #b3578c;
+  --text: #e5f6e8;
+  --background: #040a05;
+  --primary: #93d7a0;
+  --secondary: #308267;
+  --accent: #50bea6;
 }
+
 
 * {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

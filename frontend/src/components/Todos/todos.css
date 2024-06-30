@@ -1,0 +1,34 @@
+.todos-container {
+    width: 60%;
+    height: 80vh;
+    padding: 30px 50px;
+    margin: auto;
+    color: var(--text);
+}
+
+.todos-container h1 {
+    margin-bottom: 20px;
+}
+
+.todos {
+    height: 100%;
+    overflow: auto;
+}
+
+.todos-container li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background-color: var(--primary);
+    color: var(--background);
+    list-style-position: inside;
+    padding: 24px;
+    margin-bottom: 4px;
+}
+
+.left, .right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

@@ -1,17 +1,15 @@
-import ThemeSwitcher from './components/ThemeSwitcher/ThemeSwitcher';
-import TodoContainer from './components/TodoContainer/TodoContainer';
-import './App.css'
+import ThemeSwitcher from "./components/ThemeSwitcher/ThemeSwitcher";
+import Todos from "./components/Todos/Todos";
+import "./App.css";
 
 function App() {
-  return(
-    <div className="app">
-      <ThemeSwitcher></ThemeSwitcher>
+    return (
+        <div className="app">
+            <ThemeSwitcher></ThemeSwitcher>
 
-      <div className="container">
-        <TodoContainer></TodoContainer>
-      </div>
-    </div>
-  )
+            <Todos></Todos>
+        </div>
+    );
 }
 
 export default App;
