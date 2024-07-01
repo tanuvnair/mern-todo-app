@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "./todos.css";
 import { Todo } from "./Todo.jsx";
+import { AddTodo } from "./AddTodo.jsx";
 
 function Todos() {
     useEffect(() => {
@@ -15,6 +16,9 @@ function Todos() {
     return (
         <div className="todos-container">
             <h1><span className="text-do">ToDo</span> List <small>({todos?.length})</small></h1>
+
+            <AddTodo></AddTodo>
+
             <ul className="todos">
                 {todos.map((todo) => (
                     <Todo key={todo._id} todo={todo} />

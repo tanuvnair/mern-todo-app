@@ -14,6 +14,20 @@
     color: var(--accent);
 }
 
+.add-todos {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.add-todos input {
+    flex: 1;
+    padding: 10px 10px;
+    background-color: var(--text);
+    color: var(--background);
+    border: none;
+}
+
 .todos {
     height: 100%;
     overflow: auto;
@@ -27,9 +41,8 @@
     background-color: var(--primary);
     color: var(--background);
     list-style-position: inside;
-    padding: 24px;
+    padding: 16px;
     margin-bottom: 12px;
-    border-radius: 6px;
 }
 
 .left, .right {
@@ -43,13 +56,12 @@
     height: 20px;
     cursor: pointer;
     accent-color: var(--background);
-    border-radius: 50%;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .btn {
     padding: 10px 10px;
-    border-radius: 6px;
     background-color: var(--secondary);
     color: var(--text);
     cursor: pointer;

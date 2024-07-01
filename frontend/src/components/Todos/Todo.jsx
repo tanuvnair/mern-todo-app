@@ -6,7 +6,7 @@ export const Todo = ({ todo }) => {
         <li>
             <div className="left">
                 <input type="checkbox" className="checkbox" />
-                <h3>{todo.title}</h3>
+                <h4>{todo.title}</h4>
             </div>
 
             <div className="right">
