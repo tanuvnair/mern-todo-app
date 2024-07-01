@@ -16,3 +16,5 @@ export const Todo = ({ todo }) => {
         </li>
     );
 };
+
+export default Todo;

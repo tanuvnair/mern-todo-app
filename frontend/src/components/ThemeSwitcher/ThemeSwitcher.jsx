@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaMoon, FaRegMoon } from "react-icons/fa";
 import "./theme-switcher.css";
 
-function ThemeSwitcher() {
+export const ThemeSwitcher = () => {
     const [currentTheme, setCurrentTheme] = useState("dark");
 
     const toggleTheme = () => {
@@ -17,6 +17,6 @@ function ThemeSwitcher() {
             {currentTheme === "light" ? <FaMoon /> : <FaRegMoon />}
         </button>
     );
-}
+};
 
 export default ThemeSwitcher;
