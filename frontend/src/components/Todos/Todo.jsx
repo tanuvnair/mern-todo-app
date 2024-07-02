@@ -1,7 +1,9 @@
 import React from "react";
 import { FaPencilAlt, FaTrashAlt } from "react-icons/fa";
 
-export const Todo = ({ todo }) => {
+export const Todo = ({ todo, deleteTodo }) => {
+
+
     return (
         <li>
             <div className="left">
@@ -10,8 +12,8 @@ export const Todo = ({ todo }) => {
             </div>
 
             <div className="right">
-                <button className="btn"><FaPencilAlt /></button>
-                <button className="btn"><FaTrashAlt /></button>
+                <button className="btn" onClick={() => setEdit({id: todo._id, value: todo.title})}><FaPencilAlt /></button>
+                <button className="btn" onClick={() => deleteTodo(todo._id)}><FaTrashAlt /></button>
             </div>
         </li>
     );

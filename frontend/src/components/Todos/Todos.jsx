@@ -38,6 +38,22 @@ export const Todos = () => {
         }
     };
 
+    const deleteTodo = async (id) => {
+        try {
+            const response = await fetch(`http://localhost:3001/deleteTodo/${id}`, {
+                method: "DELETE",
+            });
+
+            if (response.ok) {
+                fetchTodos();
+            } else {
+                console.error("Failed to delete todo:");
+            }
+        } catch (error) {
+            console.error("Error deleting todo:", error);
+        }
+    };
+
     return (
         <div className="todos-container">
             <h1>
@@ -49,7 +65,7 @@ export const Todos = () => {
 
             <ul className="todos">
                 {todos.map((todo) => (
-                    <Todo key={todo._id} todo={todo} />
+                    <Todo key={todo._id} todo={todo} deleteTodo={deleteTodo} />
                 ))}
             </ul>
         </div>
